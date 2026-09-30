@@ -1,7 +1,6 @@
 # Cora Graph Data Exploration and Conv1d Exercise
 
-A completed educational notebook based on a course exercise. The original notebook says **“adapted from: Longa”**; the user identified it as a Coursera exercise. This repository attributes that context and does not claim the assignment prompt or dataset as original work.
-
+A completed educational notebook based on a course exercise. The original notebook says **“adapted from: Longa”**
 The notebook loads the Cora citation graph with PyTorch Geometric, inspects node labels, features and masks, selects high-degree nodes, builds and relabels a subgraph, extracts a two-hop neighborhood, and demonstrates a pointwise `Conv1d` transformation and MSE gradient. The incomplete `TODO` cells and device-selection bug in the supplied notebook have been filled.
 
 **Technical distinction:** `Conv1d(kernel_size=1)` acts on each node's three selected features independently. The demonstration does **not** aggregate neighbor messages, train a graph neural network classifier, or report node classification accuracy. Its `edge_index` is used for graph exploration, not inside the Conv1d forward pass.
